@@ -1,0 +1,33 @@
+<%- include('header'); %>
+
+<div style="border: 2px solid blue; padding: 20px; text-align: center;">
+    <h1>Home Page</h1>
+    <p><%= msg %></p>
+
+    <!-- Manage Users Section -->
+    <div>
+        <h2>Manage Users</h2>
+        <a href="/addUser" class="btn btn-success">Add User</a>
+        <a href="/listUsers" class="btn btn-primary">List Users</a>
+    </div>
+
+    <br>
+
+    <!-- Manage Orders Section -->
+    <a href="/addOrder" class="btn btn-success">Add Order</a>
+    <a href="/listOrders" class="btn btn-primary">List Orders</a>
+
+    <br><br>
+
+    <!-- Manage Items Section -->
+    <a href="/additem" class="btn btn-success">Add Item</a>
+    <a href="/listitem" class="btn btn-primary">List Items</a>
+
+    <br><br>
+
+    <!-- Manage Categories Section -->
+    <a href="/addcategory" class="btn btn-success">Add Category</a>
+    <a href="/listcategory" class="btn btn-primary">List Categories</a>
+</div>
+
+<%- include('footer'); %>

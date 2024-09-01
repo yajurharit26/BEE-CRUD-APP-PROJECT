@@ -1,0 +1,51 @@
+<%- include("header"); %>
+
+<div style="border: 2px solid orange; padding: 20px; width: 1000px; margin: auto;">
+    <h1>Edit User</h1>
+    <form action="/editUserSubmit" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="<%= userData.name %>" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" value="<%= userData.email %>" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" value="<%= userData.password %>" /></td>
+            </tr>
+            <tr>
+                <td>User Role</td>
+                <td><input type="text" name="userRole" value="<%= userData.userRole %>" /></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="phoneNumber" value="<%= userData.phoneNumber %>" /></td>
+            </tr>
+            <tr>
+                <td>User Image (URL)</td>
+                <td><input type="text" name="userImage" value="<%= userData.userImage %>" /></td>
+            </tr>
+            <tr>
+                <td>Verified</td>
+                <td><input type="checkbox" name="verified" <%= userData.verified ? "checked" : "" %> /></td>
+            </tr>
+            <tr>
+                <td>Secret Key</td>
+                <td><input type="text" name="secretKey" value="<%= userData.secretKey %>" /></td>
+            </tr>
+            <tr>
+                <td>History (comma separated)</td>
+                <td><input type="text" name="history" value="<%= userData.history.join(",") %>" /></td>
+            </tr>
+            <input type="hidden" name="userId" value="<%= userData._id %>" />
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Update User" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%- include("footer"); %>

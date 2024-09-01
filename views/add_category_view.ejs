@@ -1,0 +1,27 @@
+<%- include("header") %>
+
+<div style="border: 2px red dotted; height: 500px; width: 1000px;">
+    <form action="addCategorySubmit" method="post">
+        <table align="center" class="table table-bordered">
+            <tr>
+                <td>Category Name</td>
+                <td><input type="text" name="cname" required/></td>
+            </tr>
+            <tr>
+                <td>Category Description</td>
+                <td><textarea name="cDescription" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Category Status</td>
+                <td><input type="text" name="cStatus" required/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%- include("footer") %>

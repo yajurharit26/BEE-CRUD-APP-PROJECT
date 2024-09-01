@@ -1,0 +1,45 @@
+<%- include('header'); %>
+
+<div style="border: 2px solid blue; padding: 20px; width: 1000px; margin: auto;">
+    <h1>Edit Order</h1>
+    <form action="/editOrderSubmit" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <td>All Products</td>
+                <td><input type="text" name="allProducts" value="<%= orderData.allProducts %>" /></td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="user" value="<%= orderData.user %>" /></td>
+            </tr>
+            <tr>
+                <td>Amount</td>
+                <td><input type="number" name="amount" value="<%= orderData.amount %>" /></td>
+            </tr>
+            <tr>
+                <td>Transaction ID</td>
+                <td><input type="text" name="transactionId" value="<%= orderData.transactionId %>" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="address" value="<%= orderData.address %>" /></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="phoneNumber" value="<%= orderData.phoneNumber %>" /></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td><input type="text" name="status" value="<%= orderData.status %>" /></td>
+            </tr>
+            <input type="hidden" name="orderId" value="<%= orderData._id %>" />
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Update" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%- include('footer'); %>

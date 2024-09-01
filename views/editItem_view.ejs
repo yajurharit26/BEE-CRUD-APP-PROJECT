@@ -1,0 +1,51 @@
+<%- include("header") %>
+
+<div style="border: 2px red dotted; height: 500px; width: 1000px;">
+<h1>Edit Product</h1>
+<form action="/editItemSubmit" method="post">
+<table align="center" class="table table-bordered">
+<tr>
+<td>Product Name</td>
+<td><input type="text" name="pName" value="<%= itemData.pName %>"/></td>
+</tr>
+<tr>
+<td>Product Description</td>
+<td><textarea name="pDescription"><%= itemData.pDescription %></textarea></td>
+</tr>
+<tr>
+<td>Product Price</td>
+<td><input type="number" name="pPrice" value="<%= itemData.pPrice %>"/></td>
+</tr>
+<tr>
+<td>Quantity Sold</td>
+<td><input type="number" name="pSold" value="<%= itemData.pSold %>"/></td>
+</tr>
+<tr>
+<td>Product Quantity</td>
+<td><input type="number" name="pQuantity" value="<%= itemData.pQuantity %>"/></td>
+</tr>
+<tr>
+<td>Product Category</td>
+<td><input type="text" name="pCategory" value="<%= itemData.pCategory %>"/></td>
+</tr>
+<tr>
+<td>Product Offer</td>
+<td><input type="text" name="pOffer" value="<%= itemData.pOffer %>"/></td>
+</tr>
+<tr>
+<td>Product Rating</td>
+<td><input type="number" step="0.1" name="pRating" max="5" min="0" value="<%= itemData.pRating %>"/></td>
+</tr>
+<tr>
+<td>Product Status</td>
+<td><input type="text" name="pStatus" value="<%= itemData.pStatus %>"/></td>
+</tr>
+<input type="hidden" name="itemid" value="<%= itemData._id %>" />
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Update" /></td>
+</tr>
+</table>
+</form>
+</div>
+
+<%- include("footer") %>

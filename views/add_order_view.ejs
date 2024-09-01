@@ -1,0 +1,44 @@
+<%- include('header'); %>
+
+<div style="border: 2px solid green; padding: 20px; width: 500px; margin: auto;">
+    <h1>Add Order</h1>
+    <form action="/addOrderSubmit" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <td>All Products</td>
+                <td><input type="text" name="allProducts" required/></td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="user" required/></td>
+            </tr>
+            <tr>
+                <td>Amount</td>
+                <td><input type="number" name="amount" required/></td>
+            </tr>
+            <tr>
+                <td>Transaction ID</td>
+                <td><input type="text" name="transactionId" required/></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="address" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="phoneNumber" required/></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td><input type="text" name="status" required/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Add Order" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%- include('footer'); %>

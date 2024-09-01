@@ -1,0 +1,38 @@
+<%- include('header'); %>
+
+<div style="border: 2px solid blue; padding: 20px; width: 1000px; margin: auto;">
+    <h1>Orders List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>All Products</th>
+                <th>User</th>
+                <th>Amount</th>
+                <th>Transaction ID</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let order of ordersList) { %>
+                <tr>
+                    <td><%= order.allProducts %></td>
+                    <td><%= order.user %></td>
+                    <td><%= order.amount %></td>
+                    <td><%= order.transactionId %></td>
+                    <td><%= order.address %></td>
+                    <td><%= order.phoneNumber %></td>
+                    <td><%= order.status %></td>
+                    <td>
+                        <a href="/editOrder?orderid=<%= order._id %>">Edit</a> |
+                        <a href="/deleteOrder?orderid=<%= order._id %>">Delete</a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('footer'); %>

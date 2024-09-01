@@ -1,0 +1,35 @@
+<%- include("header") %>
+
+<div style="border: 2px red dotted; height: 500px; width: 1000px;">
+    <table class="table table-stripped" align="center">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Category Description</th>
+                <th>Category Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (catList.length > 0) { %>
+                <% for (let d of catList) { %>
+                    <tr>
+                        <td><%= d.catname %></td>
+                        <td><%= d.cDescription || 'N/A' %></td>
+                        <td><%= d.cStatus || 'N/A' %></td>
+                        <td>
+                            <a href="/editcategory?catid=<%= d._id %>">Edit</a> | 
+                            <a href="/delcategory?catid=<%= d._id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4" align="center">No categories found.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("footer") %>
