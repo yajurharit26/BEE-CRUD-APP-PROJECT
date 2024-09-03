@@ -1,40 +1,40 @@
 <%- include('header'); %>
 
-<div style="border: 2px solid green; padding: 20px; width: 500px; margin: auto;">
-    <h1>Add Order</h1>
+<div id="order-form-container" style="border: 2px solid green; padding: 30px; width: 500px; margin: 50px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 id="form-title" style="text-align: center; color: #333; margin-bottom: 20px;">Add Order</h1>
     <form action="/addOrderSubmit" method="post">
-        <table class="table table-bordered">
+        <table id="order-form-table" style="width: 100%; border-collapse: collapse;">
             <tr>
-                <td>All Products</td>
-                <td><input type="text" name="allProducts" required/></td>
+                <td id="label-products" style="text-align: right; padding-right: 10px; font-weight: bold;">All Products</td>
+                <td><input type="text" name="allProducts" id="input-products" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td>User</td>
-                <td><input type="text" name="user" required/></td>
+                <td id="label-user" style="text-align: right; padding-right: 10px; font-weight: bold;">User</td>
+                <td><input type="text" name="user" id="input-user" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td>Amount</td>
-                <td><input type="number" name="amount" required/></td>
+                <td id="label-amount" style="text-align: right; padding-right: 10px; font-weight: bold;">Amount</td>
+                <td><input type="number" name="amount" id="input-amount" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td>Transaction ID</td>
-                <td><input type="text" name="transactionId" required/></td>
+                <td id="label-transaction" style="text-align: right; padding-right: 10px; font-weight: bold;">Transaction ID</td>
+                <td><input type="text" name="transactionId" id="input-transaction" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td>Address</td>
-                <td><textarea name="address" required></textarea></td>
+                <td id="label-address" style="text-align: right; padding-right: 10px; font-weight: bold;">Address</td>
+                <td><textarea name="address" id="input-address" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 80px;" required></textarea></td>
             </tr>
             <tr>
-                <td>Phone Number</td>
-                <td><input type="text" name="phoneNumber" required/></td>
+                <td id="label-phone" style="text-align: right; padding-right: 10px; font-weight: bold;">Phone Number</td>
+                <td><input type="text" name="phoneNumber" id="input-phone" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td>Status</td>
-                <td><input type="text" name="status" required/></td>
+                <td id="label-status" style="text-align: right; padding-right: 10px; font-weight: bold;">Status</td>
+                <td><input type="text" name="status" id="input-status" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required/></td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Add Order" />
+                <td colspan="2" id="submit-container" style="text-align: center; padding-top: 20px;">
+                    <input type="submit" value="Add Order" id="submit-button" style="padding: 12px 30px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px;" />
                 </td>
             </tr>
         </table>

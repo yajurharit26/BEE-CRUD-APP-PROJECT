@@ -1,50 +1,52 @@
 <%- include("header") %>
 
-<div style="border: 2px red dotted; height: 500px; width: 1000px;">
-<h1>Add Product</h1>
-<form action="addItemSubmit" method="post">
-<table align="center" class="table table-bordered">
-<tr>
-<td>Product Name</td>
-<td><input type="text" name="pName"/></td>
-</tr>
-<tr>
-<td>Product Description</td>
-<td><textarea name="pDescription"></textarea></td>
-</tr>
-<tr>
-<td>Product Price</td>
-<td><input type="number" name="pPrice"/></td>
-</tr>
-<tr>
-<td>Quantity Sold</td>
-<td><input type="number" name="pSold"/></td>
-</tr>
-<tr>
-<td>Product Quantity</td>
-<td><input type="number" name="pQuantity"/></td>
-</tr>
-<tr>
-<td>Product Category</td>
-<td><input type="text" name="pCategory"/></td>
-</tr>
-<tr>
-<td>Product Offer</td>
-<td><input type="text" name="pOffer"/></td>
-</tr>
-<tr>
-<td>Product Rating</td>
-<td><input type="number" step="0.1" name="pRating" max="5" min="0"/></td>
-</tr>
-<tr>
-<td>Product Status</td>
-<td><input type="text" name="pStatus"/></td>
-</tr>
-<tr>
-<td colspan="2" align="center"><input type="submit" value="Submit" /></td>
-</tr>
-</table>
-</form>
+<div id="product-form-container" style="border: 2px solid #007bff; padding: 30px; width: 800px; margin: 50px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 id="form-title" style="text-align: center; color: #333; margin-bottom: 20px;">Add Product</h1>
+    <form action="addItemSubmit" method="post">
+        <table id="product-form-table" style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td id="label-pName" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Name</td>
+                <td><input type="text" name="pName" id="input-pName" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pDescription" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Description</td>
+                <td><textarea name="pDescription" id="input-pDescription" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 80px;"></textarea></td>
+            </tr>
+            <tr>
+                <td id="label-pPrice" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Price</td>
+                <td><input type="number" name="pPrice" id="input-pPrice" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pSold" style="text-align: right; padding-right: 10px; font-weight: bold;">Quantity Sold</td>
+                <td><input type="number" name="pSold" id="input-pSold" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pQuantity" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Quantity</td>
+                <td><input type="number" name="pQuantity" id="input-pQuantity" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pCategory" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Category</td>
+                <td><input type="text" name="pCategory" id="input-pCategory" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pOffer" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Offer</td>
+                <td><input type="text" name="pOffer" id="input-pOffer" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td id="label-pRating" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Rating</td>
+                <td><input type="number" step="0.1" name="pRating" id="input-pRating" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" max="5" min="0" /></td>
+            </tr>
+            <tr>
+                <td id="label-pStatus" style="text-align: right; padding-right: 10px; font-weight: bold;">Product Status</td>
+                <td><input type="text" name="pStatus" id="input-pStatus" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="submit-container" style="text-align: center; padding-top: 20px;">
+                    <input type="submit" value="Submit" id="submit-button" style="padding: 12px 30px; background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px;" />
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
 
 <%- include("footer") %>

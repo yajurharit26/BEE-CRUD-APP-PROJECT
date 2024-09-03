@@ -1,31 +1,32 @@
 <%- include("header") %>
 
-<div style="border: 2px red dotted; height: 500px; width: 1000px;">
-    <table class="table table-stripped" align="center">
+<div id="category-list-container" style="border: 2px solid green; padding: 20px; width: 1000px; margin: 20px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 id="category-list-title" style="text-align: center; color: #333; margin-bottom: 20px;">Category List</h1>
+    <table id="category-list-table" class="table table-striped" style="width: 100%; border-collapse: collapse;">
         <thead>
             <tr>
-                <th>Category Name</th>
-                <th>Category Description</th>
-                <th>Category Status</th>
-                <th>Actions</th>
+                <th id="header-catname" style="text-align: left; padding: 10px; background-color: green; color: white;">Category Name</th>
+                <th id="header-cDescription" style="text-align: left; padding: 10px; background-color: green; color: white;">Category Description</th>
+                <th id="header-cStatus" style="text-align: left; padding: 10px; background-color: green; color: white;">Category Status</th>
+                <th id="header-actions" style="text-align: center; padding: 10px; background-color: green; color: white;">Actions</th>
             </tr>
         </thead>
         <tbody>
             <% if (catList.length > 0) { %>
                 <% for (let d of catList) { %>
                     <tr>
-                        <td><%= d.catname %></td>
-                        <td><%= d.cDescription || 'N/A' %></td>
-                        <td><%= d.cStatus || 'N/A' %></td>
-                        <td>
-                            <a href="/editcategory?catid=<%= d._id %>">Edit</a> | 
-                            <a href="/delcategory?catid=<%= d._id %>">Delete</a>
+                        <td style="padding: 10px;"><%= d.catname %></td>
+                        <td style="padding: 10px;"><%= d.cDescription || 'N/A' %></td>
+                        <td style="padding: 10px;"><%= d.cStatus || 'N/A' %></td>
+                        <td style="text-align: center; padding: 10px;">
+                            <a href="/editcategory?catid=<%= d._id %>" style="color: #007bff; text-decoration: none; padding: 5px;">Edit</a> | 
+                            <a href="/delcategory?catid=<%= d._id %>" style="color: #dc3545; text-decoration: none; padding: 5px;">Delete</a>
                         </td>
                     </tr>
                 <% } %>
             <% } else { %>
                 <tr>
-                    <td colspan="4" align="center">No categories found.</td>
+                    <td colspan="4" style="text-align: center; padding: 20px;">No categories found.</td>
                 </tr>
             <% } %>
         </tbody>

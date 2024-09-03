@@ -1,37 +1,42 @@
 <%- include('header'); %>
 
-<div style="border: 2px red dotted; height: 500px; width: 1000px;">
-<h1 class="bg-primary text-dark">Product List</h1>
-<table align="center" class="table table-striped">
-<tr>
-<th>Product Name</th>
-<th>Description</th>
-<th>Price</th>
-<th>Quantity Sold</th>
-<th>Quantity</th>
-<th>Category</th>
-<th>Offer</th>
-<th>Rating</th>
-<th>Status</th>
-<th>Action</th>
-</tr>
-<% for (let x of itemData){ %>
-<tr>
-<td><%= x.pName %></td>
-<td><%= x.pDescription %></td>
-<td><%= x.pPrice %></td>
-<td><%= x.pSold %></td>
-<td><%= x.pQuantity %></td>
-<td><%= x.pCategory %></td>
-<td><%= x.pOffer %></td>
-<td><%= x.pRating %></td>
-<td><%= x.pStatus %></td>
-<td>
-    <a href="/editItem?itemid=<%= x._id %>">Edit</a> | 
-    <a href="/deleteItem?itemid=<%= x._id %>">Delete</a>
-</td>
-</tr>
-<% } %>
-</table>
+<div style="border: 2px solid green; padding: 20px; width: 1000px; margin: auto; border-radius: 8px;">
+    <h1 style="text-align: center; padding: 10px; color:black; border-radius: 8px;">Product List</h1>
+    <table align="center" class="table table-striped" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+        <thead style="background-color: #f2f2f2; color: #333;">
+            <tr>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Product Name</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Description</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Price</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Quantity Sold</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Quantity</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Category</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Offer</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Rating</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Status</th>
+                <th style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let x of itemData){ %>
+            <tr style="background-color: #fff; color: #333;">
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pName %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pDescription %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pPrice %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pSold %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pQuantity %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pCategory %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pOffer %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pRating %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= x.pStatus %></td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">
+                    <a href="/editItem?itemid=<%= x._id %>" style="color: green; text-decoration: none; margin-right: 10px;">Edit</a>
+                    <a href="/deleteItem?itemid=<%= x._id %>" style="color: red; text-decoration: none;">Delete</a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
 
 <%- include('footer'); %>

@@ -1,24 +1,25 @@
 <%- include("header") %>
 
-<div style="border: 2px red dotted; height: 500px; width: 1000px;">
+<div style="border: 2px solid green; padding: 20px; width: 1000px; margin: auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 style="text-align: center; color: #333; margin-bottom: 20px;">Edit Category</h1>
     <form action="editCategorySubmit" method="post">
-        <table align="center" class="table table-bordered">
+        <table align="center" class="table table-bordered" style="width: 100%; border-collapse: collapse;">
             <tr>
-                <td>Edit Category Name</td>
-                <td><input type="text" name="catname" value="<%=catdata.catname%>" required/></td>
+                <td style="text-align: right; padding-right: 10px; font-weight: bold;">Edit Category Name</td>
+                <td><input type="text" name="catname" value="<%=catdata.catname%>" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>Edit Category Description</td>
-                <td><textarea name="cDescription" required><%=catdata.cDescription%></textarea></td>
+                <td style="text-align: right; padding-right: 10px; font-weight: bold;">Edit Category Description</td>
+                <td><textarea name="cDescription" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><%=catdata.cDescription%></textarea></td>
             </tr>
             <tr>
-                <td>Edit Category Status</td>
-                <td><input type="text" name="cStatus" value="<%=catdata.cStatus%>" required/></td>
+                <td style="text-align: right; padding-right: 10px; font-weight: bold;">Edit Category Status</td>
+                <td><input type="text" name="cStatus" value="<%=catdata.cStatus%>" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <input type="hidden" name="catid" value="<%=catdata._id%>" />
             <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Update" />
+                <td colspan="2" align="center" style="padding-top: 20px;">
+                    <input type="submit" value="Update" style="padding: 12px 30px; background-color: green; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px;" />
                 </td>
             </tr>
         </table>

@@ -1,47 +1,45 @@
 <%- include("header") %>
 
-<div style="border: 2px solid green; padding: 20px; width: 1000px; margin: auto;">
-    <h1>Add User</h1>
+<div id="user-form-container" style="border: 2px solid green; padding: 30px; width: 800px; margin: 50px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 id="form-title" style="text-align: center; color: #333; margin-bottom: 20px;">Add User</h1>
     <form action="/addUserSubmit" method="post">
-        <table class="table table-bordered">
+        <table id="user-form-table" style="width: 100%; border-collapse: collapse;">
             <tr>
-                <td>Name</td>
-                <td><input type="text" name="name" /></td>
+                <td id="label-name" style="text-align: right; padding-right: 10px; font-weight: bold;">Name</td>
+                <td><input type="text" name="name" id="input-name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>Email</td>
-                <td><input type="email" name="email" /></td>
+                <td id="label-email" style="text-align: right; padding-right: 10px; font-weight: bold;">Email</td>
+                <td><input type="email" name="email" id="input-email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>Password</td>
-                <td><input type="password" name="password" /></td>
+                <td id="label-password" style="text-align: right; padding-right: 10px; font-weight: bold;">Password</td>
+                <td><input type="password" name="password" id="input-password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>User Role</td>
-                <td><input type="text" name="userRole" /></td>
+                <td id="label-userRole" style="text-align: right; padding-right: 10px; font-weight: bold;">User Role</td>
+                <td><input type="text" name="userRole" id="input-userRole" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>Phone Number</td>
-                <td><input type="text" name="phoneNumber" /></td>
+                <td id="label-phoneNumber" style="text-align: right; padding-right: 10px; font-weight: bold;">Phone Number</td>
+                <td><input type="text" name="phoneNumber" id="input-phoneNumber" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>User Image (URL)</td>
-                <td><input type="text" name="userImage" /></td>
+                <td id="label-verified" style="text-align: right; padding-right: 10px; font-weight: bold;">Verified</td>
+                <td><input type="checkbox" name="verified" id="input-verified" style="transform: scale(1.5); margin-left: 10px;" /></td>
             </tr>
             <tr>
-                <td>Verified</td>
-                <td><input type="checkbox" name="verified" /></td>
+                <td id="label-secretKey" style="text-align: right; padding-right: 10px; font-weight: bold;">Secret Key</td>
+                <td><input type="text" name="secretKey" id="input-secretKey" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>Secret Key</td>
-                <td><input type="text" name="secretKey" /></td>
+                <td id="label-history" style="text-align: right; padding-right: 10px; font-weight: bold;">History (comma separated)</td>
+                <td><input type="text" name="history" id="input-history" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" /></td>
             </tr>
             <tr>
-                <td>History (comma separated)</td>
-                <td><input type="text" name="history" /></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center"><input type="submit" value="Add User" /></td>
+                <td colspan="2" id="submit-container" style="text-align: center; padding-top: 20px;">
+                    <input type="submit" value="Add User" id="submit-button" style="padding: 12px 30px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px;" />
+                </td>
             </tr>
         </table>
     </form>

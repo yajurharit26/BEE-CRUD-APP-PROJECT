@@ -1,113 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechWare Store</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .card-header-custom {
-            background-color: #4e73df;
-            color: #fff;
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-        .btn-custom-success {
-            background-color: #198754;
-            color: #fff;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        .btn-custom-success:hover {
-            background-color: #157347;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-        .btn-custom-primary {
-            background-color: #0d6efd;
-            color: #ff0000;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        .btn-custom-primary:hover {
-            background-color: #0b5ed7;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-        .section-card {
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-        }
-        .bg-light-custom {
-            background-color: #f8f9fa;
-        }
-    </style>
-</head>
-<body>
-    <%- include('header'); %>
 
-    <div class="container my-5">
-        <div class="text-center mb-4">
-            <h1>TechWare Store</h1>
-            <p class="text-muted"><%= msg %></p>
-        </div>
+        <%- include('header'); %>
+        <div class="container">
+        <div class="content">
+            <h1>The TechWare Store</h1>
+            <p style="font-family:'Times New Roman', Times, serif ;font-weight: 600;font-size: 35px;"><%= msg %></p>
 
-        <div class="card-container">
-            <!-- Manage Users Card -->
-            <div class="card section-card bg-light-custom">
-                <div class="card-header card-header-custom">Manage Users</div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="/addUser" class="btn btn-custom-success">Add User</a>
-                        <a href="/listUsers" class="btn btn-custom-primary">List Users</a>
-                    </div>
-                </div>
+            <!-- Manage Users Section -->
+            <div class="btn-group">
+                <!-- <h2>Manage Users</h2> -->
+                <a href="/addUser" class="btn btn-success">Add User</a>
+                <a href="/listUsers" class="btn btn-primary">List Users</a>
             </div>
 
-            <!-- Manage Orders Card -->
-            <div class="card section-card bg-light-custom">
-                <div class="card-header card-header-custom">Manage Orders</div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="/addOrder" class="btn btn-custom-success">Add Order</a>
-                        <a href="/listOrders" class="btn btn-custom-primary">List Orders</a>
-                    </div>
-                </div>
+            <!-- Manage Orders Section -->
+            <div class="btn-group">
+                <a href="/addOrder" class="btn btn-success">Add Order</a>
+                <a href="/listOrders" class="btn btn-primary">List Orders</a>
+            </div>
+            <br>
+
+            <!-- Manage Items Section -->
+            <div class="btn-group">
+                <a href="/additem" class="btn btn-success">Add Product</a>
+                <a href="/listitem" class="btn btn-primary">List Products</a>
             </div>
 
-            <!-- Manage Items Card -->
-            <div class="card section-card bg-light-custom">
-                <div class="card-header card-header-custom">Manage Items</div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="/additem" class="btn btn-custom-success">Add Item</a>
-                        <a href="/listitem" class="btn btn-custom-primary">List Items</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Manage Categories Card -->
-            <div class="card section-card bg-light-custom">
-                <div class="card-header card-header-custom">Manage Categories</div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="/addcategory" class="btn btn-custom-success">Add Category</a>
-                        <a href="/listcategory" class="btn btn-custom-primary">List Categories</a>
-                    </div>
-                </div>
+            <!-- Manage Categories Section -->
+            <div class="btn-group">
+                <a href="/addcategory" class="btn btn-success">Add Category</a>
+                <a href="/listcategory" class="btn btn-primary">List Categories</a>
             </div>
         </div>
-    </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <%- include('footer'); %>
-</body>
-</html>
+        <%- include('footer'); %>
+   
